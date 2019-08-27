@@ -1,0 +1,36 @@
+# 4. 简单的绩点计算器
+
+# 普通版
+total_score = 0
+total_marks = 0
+course = 1
+
+while True:
+    score = float(input('输入第%d门课程分数：' % course))
+    mark = float(input('输入第%d门课程学分：' % course))
+    if score >= 90:
+        gpa = 4.0
+    elif score >= 85:
+        gpa = 3.7
+    elif score >= 82:
+        gpa = 3.0
+    elif score >= 78:
+        gpa = 3.0
+    elif score >= 75:
+        gpa = 2.7
+    elif score >= 71:
+        gpa = 2.3
+    elif score >= 66:
+        gpa = 2.0
+    elif score >= 62:
+        gpa = 1.7
+    elif score >= 60:
+        gpa = 1.3
+    else:
+        gpa = 0
+
+    total_score = total_score + gpa * mark
+    total_marks += mark
+    averge_gpa = total_score / total_marks
+    print('当前平均绩点：%.2f' % averge_gpa)
+    course += 1
